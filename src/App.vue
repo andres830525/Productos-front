@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
+  <!-- Importing and using Navbar component -->
+  <Navbar />
+  <div id="app">
+  <!-- Insertion point for views based on the current route -->
+  <!-- When navigating to different URLs, different content will be displayed here -->
+  <router-view/>
+  </div>
+  </template>
+  
+  
+  <script>
+  // Importing Navbar component
+  import Navbar from './components/Navbar.vue';
+  
+  
+  export default {
+  // Registering Navbar component
   components: {
-    HelloWorld
+  Navbar,
+  },
+  // Name of the root component
+  name: 'App',
   }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  </script>
+  
+  
+  
+  <style>
+  #app {
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
-}
-</style>
+  }
+  </style>
